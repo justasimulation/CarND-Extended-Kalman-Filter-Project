@@ -1,0 +1,10 @@
+#ifndef EXTENDEDKF_KALMAN_FILTER_H
+#define EXTENDEDKF_KALMAN_FILTER_H
+
+
+class KalmanFilter
+{
+};
+
+
+#endif //EXTENDEDKF_KALMAN_FILTER_H
