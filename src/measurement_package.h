@@ -16,6 +16,7 @@ class MeasurementPackage
         sensor_type_;
 
         Eigen::VectorXd raw_measurements_;
+        Eigen::VectorXd ground_truth_;
 };
 
 #endif /* MEASUREMENT_PACKAGE_H_ */

@@ -8,7 +8,7 @@ void App::Run()
 {
     while(MeasurementPackage* package = measurement_device_.GetNextMeasurement())
     {
-        tracker_.ProcessMeasurement(*package);
+        fusion_tracker_.OnMeasurementRecieved(*package);
         delete package;
     }
 }

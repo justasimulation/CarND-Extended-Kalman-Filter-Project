@@ -1,7 +1,3 @@
-//
-// Created by sergey on 29.03.17.
-//
-
 #ifndef EXTENDEDKF_STORAGE_H
 #define EXTENDEDKF_STORAGE_H
 

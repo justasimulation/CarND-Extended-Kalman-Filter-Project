@@ -1,6 +1,3 @@
-//
-// Created by sergey on 29.03.17.
-//
 
 #ifndef EXTENDEDKF_MEASUREMENT_DEVICE_H
 #define EXTENDEDKF_MEASUREMENT_DEVICE_H

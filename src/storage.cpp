@@ -1,7 +1,3 @@
-//
-// Created by sergey on 29.03.17.
-//
-
 #include <iostream>
 #include <fstream>
 
@@ -25,12 +21,10 @@ void Storage::CheckFiles(string& input_file_name, string& output_file_name)
     }
 }
 
-Storage::Storage(std::string &input_file_name, std::string &output_file_name)
+Storage::Storage(std::string &input_file_name, std::string &output_file_name):
+        input_file_(input_file_name.c_str(), ifstream::in),
+        output_file_(output_file_name.c_str(), ofstream::out)
 {
-    input_file_ = ifstream(input_file_name.c_str(), ifstream::in);
-
-    output_file_ = ofstream(output_file_name.c_str(), ofstream::out);
-
     CheckFiles(input_file_name, output_file_name);
 }
 
