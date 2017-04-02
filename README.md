@@ -64,5 +64,5 @@ Visualization without ground truth:
 * But errors are visible, especially on the first data file visualization. At the moment for me it is not clear
 how this can be fixed.
 * Based on visualizations, the second data file tracking looks better than the first data file tracking,
- but based on on the errors it is the opposite. This reminds me of the same problem from almost every project
+ but based on on the errors it is the opposite. This may be because of different scales, but still this reminds me of the same problem from almost every project
  of the first term: it is not clear how a particular error metric is related to performance in real life. 
