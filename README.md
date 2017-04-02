@@ -67,11 +67,11 @@ Visualization without ground truth:
 ![alt_text][data_2_without_ground_truth]
 
 
-##Reflections
+## Reflections
 
-*In general it looks like Kalman filters do the job and track targets quite well.
-*But errors are visible, especially on the first data file visualization. At the moment for me it is not clear
+* In general it looks like Kalman filters do the job and track targets quite well.
+* But errors are visible, especially on the first data file visualization. At the moment for me it is not clear
 how this can be fixed.
-*Based on visualizations, the second data file tracking looks better than the first data file tracking,
+* Based on visualizations, the second data file tracking looks better than the first data file tracking,
  but based on on the errors it is the opposite. This reminds me of the same problem from almost every project
  of the first term: it is not clear how a particular error metric is related to performance in real life. 
