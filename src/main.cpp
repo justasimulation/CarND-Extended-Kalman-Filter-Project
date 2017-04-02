@@ -1,9 +1,46 @@
+//CardND Extended Kalman Filter Project
+//
+//usage: ExtendedKF measurements_file_name output_file_name
+//
+//measurements format:
+//L x y timestamp gt_x gt_y gt_vx gt_vy
+//R ro phi ro_dot timestamp gt_x gt_y, gt_vx, gt_vy
+//
+//output format:
+//est_x est_y est_vx est_vy meas_x meas_y gt_x gt_y gt_vx gt_vy
+//
+
 #include <iostream>
-#include <memory>
+
 #include "app.h"
 
 using namespace std;
 
+void check_arguments(int argc, char* argv[]);
+
+/**
+ * Checks number of arguments and starts application parameterized with the arguments.
+ */
+int main(int argc, char* argv[])
+{
+    check_arguments(argc, argv);
+
+    //string input_file_name = "../data/sample-laser-radar-measurement-data-2.txt";//argv[1];
+    //string output_file_name = "output.txt";//argv[2];
+
+    string input_file_name = argv[1];
+    string output_file_name = argv[2];
+
+    App app;
+    app.Run(input_file_name, output_file_name);
+
+    return 0;
+}
+
+/**
+ * Checks that there are two arguments. Should be measurements_file_name, output_file_name
+ * Stops execution if number of arguments is incorrect.
+ */
 void check_arguments(int argc, char* argv[])
 {
     string usage_instructions = "Usage instructions: ";
@@ -37,15 +74,3 @@ void check_arguments(int argc, char* argv[])
     }
 }
 
-int main(int argc, char* argv[])
-{
-    //check_arguments(argc, argv);
-
-    string in_file_name_ = "../data/sample-laser-radar-measurement-data-2.txt";//argv[1];
-    string out_file_name_ = "output.txt";//argv[2];
-
-    App app(in_file_name_, out_file_name_);
-    app.Run();
-
-    return 0;
-}

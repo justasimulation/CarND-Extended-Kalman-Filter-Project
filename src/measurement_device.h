@@ -2,19 +2,16 @@
 #ifndef EXTENDEDKF_MEASUREMENT_DEVICE_H
 #define EXTENDEDKF_MEASUREMENT_DEVICE_H
 
-#include <memory>
-
 #include "measurement_package.h"
-#include "storage.h"
 
-class MeasurementDevice
+/**
+ * Representation of a measurement device.
+ * Currently measurements come from file so Storage implements this interface.
+ */
+class IMeasurementDevice
 {
-    private:
-        Storage &storage_;
-
     public:
-        MeasurementDevice(Storage &storage);
-        MeasurementPackage* GetNextMeasurement();
+        virtual bool GetNextMeasurement(MeasurementPackage &measurement) = 0;
 };
 
 #endif //EXTENDEDKF_MEASUREMENT_DEVICE_H
