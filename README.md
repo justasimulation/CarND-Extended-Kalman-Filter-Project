@@ -3,6 +3,13 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+[//]: # (Image References)
+[data_1_with_ground_truth]: ./resources/data_1.png
+[data_1_without_ground_truth]: ./resources/data_1_wt_gt.png
+[data_2_with_ground_truth]: ./resources/data_2.png
+[data_2_without_ground_truth]: ./resources/data_2_wt_gt.png
+
+
 ## Dependencies
 
 * cmake >= 3.5
@@ -35,51 +42,36 @@ using the following settings:
 * indent using spaces
 * set tab width to 2 spaces (keeps the matrices in source code aligned)
 
-## Code Style
+## Results
 
-Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
+For [sample-laser-radar-measurement-data-1.txt](data/sample-laser-radar-measurement-data-1.txt)
+the RMSE is:
 
-## Generating Additional Data
+[0.07, 0.06, 0.53, 0.54]
 
-This is optional!
+Visualization with ground truth:
+![alt_text][data_1_with_ground_truth]
 
-If you'd like to generate your own radar and lidar data, see the
-[utilities repo](https://github.com/udacity/CarND-Mercedes-SF-Utilities) for
-Matlab scripts that can generate additional data.
+Visualization without ground truth:
+![alt_text][data_1_without_ground_truth]
 
-## Project Instructions and Rubric
+For [sample-laser-radar-measurement-data-2.txt](data/sample-laser-radar-measurement-data-2.txt)
+the RMSE is: 
 
-Note: regardless of the changes you make, your project must be buildable using
-cmake and make!
+[0.17, 0.19, 0.48, 0.81]
 
-More information is only accessible by people who are already enrolled in Term 2
-of CarND. If you are enrolled, see [the project page](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/0949fca6-b379-42af-a919-ee50aa304e6a/lessons/f758c44c-5e40-4e01-93b5-1a82aa4e044f/concepts/12dd29d8-2755-4b1b-8e03-e8f16796bea8)
-for instructions and the project rubric.
+Visualization with ground truth:
+![alt_text][data_2_with_ground_truth]
 
-## Hints!
+Visualization without ground truth:
+![alt_text][data_2_without_ground_truth]
 
-* You don't have to follow this directory structure, but if you do, your work
-  will span all of the .cpp files here. Keep an eye out for TODOs.
 
-## Call for IDE Profiles Pull Requests
+##Reflections
 
-Help your fellow students!
-
-We decided to create Makefiles with cmake to keep this project as platform
-agnostic as possible. Similarly, we omitted IDE profiles in order to we ensure
-that students don't feel pressured to use one IDE or another.
-
-However! We'd love to help people get up and running with their IDEs of choice.
-If you've created a profile for an IDE that you think other students would
-appreciate, we'd love to have you add the requisite profile files and
-instructions to ide_profiles/. For example if you wanted to add a VS Code
-profile, you'd add:
-
-* /ide_profiles/vscode/.vscode
-* /ide_profiles/vscode/README.md
-
-The README should explain what the profile does, how to take advantage of it,
-and how to install it.
-
-Regardless of the IDE used, every submitted project must
-still be compilable with cmake and make.
+*In general it looks like Kalman filters do the job and track targets quite well.
+*But errors are visible, especially on the first data file visualization. At the moment for me it is not clear
+how this can be fixed.
+*Based on visualizations, the second data file tracking looks better than the first data file tracking,
+ but based on on the errors it is the opposite. This reminds me of the same problem from almost every project
+ of the first term: it is not clear how a particular error metric is related to performance in real life. 

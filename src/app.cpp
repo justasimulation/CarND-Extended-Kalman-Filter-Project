@@ -14,9 +14,8 @@ using namespace std;
  */
 void App::Run(const string &input_file_name, const string &output_file_name) const
 {
-    cout<<"Application started."<<endl;
-
-    auto start_time = std::chrono::system_clock::now();
+    //cout<<"Application started."<<endl;
+    //auto start_time = std::chrono::system_clock::now();
 
     //Initialize storage with file names
     Storage storage(input_file_name, output_file_name);
@@ -42,8 +41,8 @@ void App::Run(const string &input_file_name, const string &output_file_name) con
         storage.Report(result.estimation_, result.measurement_, package.ground_truth_);
     }
 
-    chrono::duration<double> proccessing_time = (chrono::system_clock::now() - start_time);
-    cout << "Processing done in " << proccessing_time.count() << " seconds"<<endl;
+    //chrono::duration<double> proccessing_time = (chrono::system_clock::now() - start_time);
+    //cout << "Processing done in " << proccessing_time.count() << " seconds"<<endl;
 
-    cout<<"RMSE:"<<endl<<fusion_tracker.GetRMSE()<<endl;
+    cout<<"RMSE"<<endl<<fusion_tracker.GetRMSE()<<endl;
 }
