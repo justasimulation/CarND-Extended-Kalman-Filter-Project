@@ -13,32 +13,29 @@ Self-Driving Car Engineer Nanodegree Program
 ## Dependencies
 
 * cmake >= 3.5
- * All OSes: [click here for installation instructions](https://cmake.org/install/)
 * make >= 4.1
-  * Linux: make is installed by default on most Linux distros
-  * Mac: [install Xcode command line tools to get make](https://developer.apple.com/xcode/features/)
-  * Windows: [Click here for installation instructions](http://gnuwin32.sourceforge.net/packages/make.htm)
 * gcc/g++ >= 5.4
-  * Linux: gcc / g++ is installed by default on most Linux distros
-  * Mac: same deal as make - [install Xcode command line tools]((https://developer.apple.com/xcode/features/)
-  * Windows: recommend using [MinGW](http://www.mingw.org/)
 
 ## Basic Build Instructions
 
-1. Clone this repo.
-2. Make a build directory: `mkdir build && cd build`
-3. Compile: `cmake .. && make` 
+1. Make a build directory: `mkdir build && cd build`
+2. Compile: `cmake .. && make` 
    * On windows, you may need to run: `cmake .. -G "Unix Makefiles" && make`
-4. Run it: `./ExtendedKF path/to/input.txt path/to/output.txt`. You can find
+3. Run it: `./ExtendedKF path/to/input.txt path/to/output.txt`. You can find
    some sample inputs in 'data/'.
     - eg. `./ExtendedKF ../data/sample-laser-radar-measurement-data-1.txt output.txt`
 
 ## Results
 
 For [sample-laser-radar-measurement-data-1.txt](data/sample-laser-radar-measurement-data-1.txt)
-the RMSE is:
+the error is:
 
-[0.07, 0.06, 0.53, 0.54]
+var | RMSE
+----|-----
+px  | 0.07
+py  | 0.06
+vx  | 0.53
+vy  | 0.54
 
 Visualization with ground truth:
 ![alt_text][data_1_with_ground_truth]
@@ -47,9 +44,14 @@ Visualization without ground truth:
 ![alt_text][data_1_without_ground_truth]
 
 For [sample-laser-radar-measurement-data-2.txt](data/sample-laser-radar-measurement-data-2.txt)
-the RMSE is: 
+the error is: 
 
-[0.17, 0.19, 0.48, 0.81]
+var | RMSE
+----|-----
+px  | 0.17
+py  | 0.19
+vx  | 0.48
+vy  | 0.81
 
 Visualization with ground truth:
 ![alt_text][data_2_with_ground_truth]
